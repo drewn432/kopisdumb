@@ -1,7 +1,8 @@
-class Enemy:
+class ScreenSaverBot:
     
-    speed = 8
-    diameter = 50
+    xspeed = 8
+    yspeed = 4
+    diameter = 20
     c = color(0,0,255)
     
     def __init__(self, x, y, team):
@@ -10,9 +11,12 @@ class Enemy:
         self.team = team
         
     def move(self):
-        self.x += self.speed
+        self.x += self.xspeed
+        self.y += self.yspeed
         if self.x < 0 or self.x > width:
-            self.speed *= -1
+            self.xspeed *= -1
+        if self.y < 0 or self.y > width:
+            self.yspeed *= -1
         
     def display(self):
         fill(self.c)

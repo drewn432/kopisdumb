@@ -1,7 +1,7 @@
-class Enemy:
+class JiggleBot:
     
     speed = 8
-    diameter = 50
+    diameter = 20
     c = color(0,0,255)
     
     def __init__(self, x, y, team):
@@ -10,9 +10,10 @@ class Enemy:
         self.team = team
         
     def move(self):
-        self.x += self.speed
-        if self.x < 0 or self.x > width:
-            self.speed *= -1
+        self.y += random(-self.speed, self.speed)
+        self.x += random(-self.speed, self.speed)
+        self.x = constrain(self.x, 0, width)
+        self.y = constrain(self.y, 0, height)
         
     def display(self):
         fill(self.c)

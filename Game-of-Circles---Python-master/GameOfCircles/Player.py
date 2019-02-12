@@ -9,7 +9,7 @@ class Player:
     up = False
     down = False
     speed = 5
-    diameter = 50
+    diameter = 20
     c = color(255,0,0)
     
     # constructor
