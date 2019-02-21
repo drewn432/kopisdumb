@@ -43,7 +43,7 @@ class Player:
         print("FIRE")
         
     def keyDown(self):
-        if key == 'f' or key == 'F':
+        if key == 'w' or key == 'W':
             sprites.append(Bullet(self.x, self.y, PVector(0, -10), self.team))
     
         if keyCode == LEFT:

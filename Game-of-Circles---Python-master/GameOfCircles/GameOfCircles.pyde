@@ -6,6 +6,7 @@ from SpriteManager import sprites
 from raindrop import raindrop
 from ScreenSaverBot import ScreenSaverBot
 from JiggleBot import JiggleBot
+from Sprite import Sprite
 
 def setup():
     print "Built with Processing Python version " + platform.python_version()
