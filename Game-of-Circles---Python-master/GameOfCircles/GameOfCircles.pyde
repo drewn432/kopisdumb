@@ -18,12 +18,12 @@ def setup():
     player = Player(width/2, height/2, playerTeam);
     
     SpriteManager.setPlayer(player)
-    SpriteManager.spawn(JiggleBot(200, 50, 2))
+    SpriteManager.spawn(JiggleBot(200, 0, 0))
     SpriteManager.spawn(Enemy(50, 50, enemyTeam))
-    SpriteManager.spawn(Raindrop(random(0, width), 30, enemyTeam))
-    SpriteManager.spawn(Raindrop(random(0, width), 30, enemyTeam))
-    SpriteManager.spawn(ScreenSaverBot(20, 150, enemyTeam))
-    SpriteManager.spawn(JiggleBot(height - 40, width/2, enemyTeam))
+    SpriteManager.spawn(Raindrop(random(0, width), 100, enemyTeam))
+    SpriteManager.spawn(Raindrop(random(0, width), 100, enemyTeam))
+    SpriteManager.spawn(ScreenSaverBot(20, 300, enemyTeam))
+    SpriteManager.spawn(JiggleBot(height - 25, width/2, enemyTeam))
                            
 def draw():
     global player, sprites
