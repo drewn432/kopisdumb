@@ -1,8 +1,10 @@
-class JiggleBot:
+from Sprite import Sprite
+
+class JiggleBot(Sprite):
     
-    speed = 8
-    diameter = 20
-    c = color(0,0,255)
+    speed = 4
+    diameter = 50
+    c = color(200)
     
     def __init__(self, x, y, team):
         self.x = x
@@ -12,8 +14,8 @@ class JiggleBot:
     def move(self):
         self.y += random(-self.speed, self.speed)
         self.x += random(-self.speed, self.speed)
-        self.x = constrain(self.x, 0, width)
         self.y = constrain(self.y, 0, height)
+        self.x = constrain(self.x, 0, width)
         
     def display(self):
         fill(self.c)

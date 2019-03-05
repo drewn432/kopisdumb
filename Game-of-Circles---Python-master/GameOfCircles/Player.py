@@ -1,7 +1,9 @@
-from SpriteManager import sprites
+import SpriteManager
+
+from Sprite import Sprite
 from Bullet import Bullet
 
-class Player:
+class Player(Sprite):
     
     # instance variables
     left = False
@@ -9,8 +11,8 @@ class Player:
     up = False
     down = False
     speed = 5
-    diameter = 20
-    c = color(255,0,0)
+    diameter = 50
+    c = color(255, 255, 0)
     
     # constructor
     def __init__(self, x, y, team):
@@ -22,6 +24,9 @@ class Player:
     def display(self):
         fill(self.c)
         ellipse(self.x, self.y, self.diameter, self.diameter)
+        
+    def handleCollision(self):
+        pass
         
     def move(self):
         if self.left:
@@ -43,7 +48,7 @@ class Player:
         print("FIRE")
         
     def keyDown(self):
-        if key == 'w' or key == 'W':
+        if key == 'f' or key == 'F':
             sprites.append(Bullet(self.x, self.y, PVector(0, -10), self.team))
     
         if keyCode == LEFT:
