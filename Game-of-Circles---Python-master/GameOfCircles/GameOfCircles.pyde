@@ -14,14 +14,15 @@ def setup():
     global player, sprites
     size(500, 500)
     playerTeam = 1
-    enemyTeam = 2
     player = Player(width/2, height/2, playerTeam);
+    enemyTeam = 2
     
     SpriteManager.setPlayer(player)
     SpriteManager.spawn(JiggleBot(200, 0, 0))
-    SpriteManager.spawn(Enemy(50, 50, enemyTeam))
+    SpriteManager.spawn(Enemy(100, 100, enemyTeam))
     SpriteManager.spawn(Raindrop(random(0, width), 100, enemyTeam))
-    SpriteManager.spawn(Raindrop(random(0, width), 100, enemyTeam))
+    SpriteManager.spawn(Raindrop(random(0, width), 110, enemyTeam))
+    SpriteManager.spawn(Raindrop(random(0, width), 125, enemyTeam))
     SpriteManager.spawn(ScreenSaverBot(20, 300, enemyTeam))
     SpriteManager.spawn(JiggleBot(height - 25, width/2, enemyTeam))
                            

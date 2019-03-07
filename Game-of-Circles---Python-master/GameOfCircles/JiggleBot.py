@@ -2,7 +2,7 @@ from Sprite import Sprite
 
 class JiggleBot(Sprite):
     
-    speed = 4
+    speed = 5
     diameter = 50
     c = color(200)
     

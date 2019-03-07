@@ -4,7 +4,7 @@ import SpriteManager
 
 class Bullet(Sprite):
     
-    diameter = 10
+    diameter = 12
     c = color(0)
     
     def __init__(self, x, y, vector, team):

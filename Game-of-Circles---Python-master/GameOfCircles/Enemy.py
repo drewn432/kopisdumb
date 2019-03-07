@@ -6,7 +6,7 @@ import SpriteManager
 
 class Enemy(Sprite):
     
-    speed = 8
+    speed = 10
     diameter = 50
     c = color(200)
     mark = 0
@@ -15,8 +15,8 @@ class Enemy(Sprite):
 
 
     def move(self):
-        self.x += self.speed
-        if self.x < 0 or self.x > width:
+        self.y -= self.speed
+        if self.y < 0 or self.y > width:
             self.speed *= -1
             
         vector = self.aim(SpriteManager.getPlayer())
@@ -38,5 +38,3 @@ class Enemy(Sprite):
         if(self.go):
             self.go = False
             SpriteManager.spawn(Bullet(self.x, self.y, vector, self.team))
-        
-        

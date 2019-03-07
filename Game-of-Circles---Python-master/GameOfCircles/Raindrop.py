@@ -2,7 +2,7 @@ from Sprite import Sprite
 
 class Raindrop(Sprite):
     
-    speed = 8
+    speed = 10
     diameter = 25
     c = color(200)
     
